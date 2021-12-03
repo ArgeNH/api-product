@@ -14,4 +14,4 @@ const BillSchema = new Schema({
     }
 });
 
-module.exports = model('product', BillSchema);
+module.exports = model('bill', BillSchema);

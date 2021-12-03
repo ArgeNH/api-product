@@ -11,4 +11,4 @@ const DetailSchema = new Schema({
     }
 });
 
-module.exports = model('product', DetailSchema);
+module.exports = model('detail', DetailSchema);
