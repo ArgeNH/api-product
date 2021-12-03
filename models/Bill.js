@@ -8,6 +8,9 @@ const BillSchema = new Schema({
     typePay: {
         type: Boolean,
         require: true
+    },
+    detail: {
+        type: [Schema.Types.ObjectId]
     }
 });
 
