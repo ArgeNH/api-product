@@ -94,13 +94,13 @@ const isExpired = async (req, res) => {
         if(aux<=0){
             
             return res.status(200).json({
-                message: "El producto ha expirado su fecha de consumo"
+                message: "El producto ha expirado su fecha de consumo", isExpired:true
             });
 
         }else{
             
             return res.status(200).json({
-                message: "El producto se puede consumir, aun no ha expirado su fecha de consumo"
+                message: "El producto se puede consumir, aun no ha expirado su fecha de consumo", isExpired:false
             });
 
         }
@@ -121,7 +121,7 @@ const calcIva = async (req, res) => {
         console.log(iva);
 
         return res.status(200).json({
-            message: "El iva del producto es: "+ iva
+            message: "El iva del producto es: "+ iva, calcIva:iva
         });
 
     } catch (error) {
