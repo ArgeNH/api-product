@@ -6,7 +6,7 @@
 - [Diego Armando Higuera Blanco](https://github.com/D13G05) - 201722366
 - [Néstor Iván Sanabria Vargas](https://github.com/sanabrianestor20) - 201210805
 ---
-##### Instrucciones al clonar el API
+#### Instrucciones al clonar el API
 Instalar las depencias necesarias 👇🏻
 ```bash
 npm install
