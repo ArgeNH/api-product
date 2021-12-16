@@ -77,7 +77,7 @@ Se uso **Mongo Atlas** para gestionar la base de datos en la nube.
 Ejemplo 👇🏻
 ```http
 en la ruta va el parametro id del producto a comprar
-http://localhost:5000/api/bill/sale/61b8d9a16eacb15ab40c3361
+http://localhost:5000/api/bill/buy/61b8d9a16eacb15ab40c3361
 ```
 en el body
 ```json
