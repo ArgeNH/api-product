@@ -23,7 +23,7 @@ El **puerto** por el que corre el API es el `5000`
 
 ---
 ### Rutas 🛣️
-#### Product 🥃🍊🍦🍔
+### Product 🥃🍊🍦🍔
 - `/api/product/` Tipo `GET` => Muestra todos los productos disponibles.
 - `/api/product/` Tipo `POST` => Permite agregar un nuevo producto. Ejemplo 👇🏻
 ```json
@@ -40,8 +40,8 @@ El **puerto** por el que corre el API es el `5000`
 -  `/api/product/:id` Tipo `DELETE` => Permite eliminar un producto de la base de datos.
 - `/api/product/expired/:id` Tipo `GET` => Indica si el producto por el `id` expiro o aun no.
 - `/api/product/iva/:id` Tipo `GET` => Indica el iva del producto por el `id`. 
-
-#### Detail 📑
+---
+### Detail 📑
 - `/api/detail/` Tipo `GET` => Muestra todos los detalles que hay en la base de datos.
 - `/api/detail/new` Tipo `POST` => Permite agregra un nuevo detalle. Ejemplo 👇🏻
 ```json
@@ -54,8 +54,8 @@ El **puerto** por el que corre el API es el `5000`
 - `/api/detail/:id` Tipo `PUT` => Permite actulizar un detalle por el `id`.
 - `/api/detail/` Tipo `DELETE` => Permite eliminar un detalle por el `id`.
 - `/api/detail/subtotal/:id` Tipo `GET` => Calcula el subtotal segun la cantidad del producto, mediante el `id` del detalle.
-
-#### Bill 💰
+---
+### Bill 💰
 - `/api/bill/` Tipo `GET` => Muestra todas las facturas disponibles en la base de datos.
 - `/api/bill/:id` Tipo `GET` => Muestra la factura por el `id` especifico.
 - `/api/bill/` Tipo `POST` => Permite crear una nueva factura. Ejemplo 👇🏻
