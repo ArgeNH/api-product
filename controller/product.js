@@ -1,7 +1,6 @@
 const Product = require('../models/Product');
 
 const getProducts = async (req, res) => {
-    //res.send({ product: "Productos" });
     try {
         const product = await Product.find();
         return res.status(200).json({
@@ -90,17 +89,23 @@ const isExpired = async (req, res) => {
         const product = await Product.findById({ _id: id });
 
         const vencimiento = product.dateExpired;
-        const aux=vencimiento.getTime()-Date.now();
-        if(aux<=0){
-            
+        const aux = vencimiento.getTime() - Date.now();
+        if (aux <= 0) {
+
             return res.status(200).json({
-                message: "El producto ha expirado su fecha de consumo", isExpired:true
+                message: "El producto ha expirado su fecha de consumo",
+                product: product.description,
+                dateExpired: product.dateExpired,
+                isExpired: true
             });
 
-        }else{
-            
+        } else {
+
             return res.status(200).json({
-                message: "El producto se puede consumir, aun no ha expirado su fecha de consumo", isExpired:false
+                message: "El producto se puede consumir, aun no ha expirado su fecha de consumo",
+                product: product.description,
+                dateExpired: product.dateExpired,
+                isExpired: false
             });
 
         }
@@ -109,7 +114,7 @@ const isExpired = async (req, res) => {
             message: "Error",
             error: error.message
         });
-    }    
+    }
 };
 
 const calcIva = async (req, res) => {
@@ -117,11 +122,14 @@ const calcIva = async (req, res) => {
         const { id } = req.params;
         const product = await Product.findById({ _id: id });
 
-        const iva = (product.value*0.19);
+        const iva = (product.value * 0.19);
         console.log(iva);
 
         return res.status(200).json({
-            message: "El iva del producto es: "+ iva, calcIva:iva
+            message: "El iva del producto es: " + iva,
+            product: product.description,
+            value: product.value,
+            calcIva: iva
         });
 
     } catch (error) {
@@ -129,7 +137,7 @@ const calcIva = async (req, res) => {
             message: "Error",
             error: error.message
         });
-    }    
+    }
 
 };
 

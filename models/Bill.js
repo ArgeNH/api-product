@@ -9,9 +9,10 @@ const BillSchema = new Schema({
         type: Boolean,
         require: true
     },
-    detail: {
-        type: [Schema.Types.ObjectId]
-    }
+    detail: [{
+        type: [Schema.Types.ObjectId],
+        ref: 'detail'
+    }]
 });
 
 module.exports = model('bill', BillSchema);
