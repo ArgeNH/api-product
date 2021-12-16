@@ -52,7 +52,7 @@ El **puerto** por el que corre el API es el `5000`
 ```
 - `/api/detail/:id` Tipo `GET` => Muestra un solo detalle por el `id`.
 - `/api/detail/:id` Tipo `PUT` => Permite actulizar un detalle por el `id`.
-- `/api/detail/` Tipo `DELETE` => Permite eliminar un detalle por el `id`.
+- `/api/detail/:id` Tipo `DELETE` => Permite eliminar un detalle por el `id`.
 - `/api/detail/subtotal/:id` Tipo `GET` => Calcula el subtotal segun la cantidad del producto, mediante el `id` del detalle.
 ---
 ### Bill 💰
